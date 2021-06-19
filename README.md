@@ -1,6 +1,6 @@
 # smallsh
 
-This is a simpel shell program developed for Unix-like systems, developed and tested in a CentOS 6 server.
+This is a simple shell program developed for Unix-like systems, developed and tested in a CentOS 6 server.
 - System calls are handled through the use of execvp() functions, which allows for simple use of the operating system's executables.
 - Commands `exit`, `status`, and `cd` are self-developed and are independent of the rest of the system call operations.
 - Forking and children processes are use for the purpose of executing commands. First a new child process will be "forked", in which the string arguments of the command will be processed for certain operations such as redirection (`>`) or process id (`$$`). After the string is processed and the arguments are in the desired state for execution, they are executed using `execvp()`. Should this execution fail, an error will be thrown.
